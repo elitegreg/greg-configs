@@ -22,12 +22,17 @@ Host vmserver-ipmi
   User ADMIN
   KexAlgorithms=+diffie-hellman-group1-sha1
 
-Host bastion
-    HostName bastion.remind.com
-    ForwardAgent yes
-    User ubuntu
+Host bwing
+  HostName bwing.tuxsoft.net
+  Port 2225
+  DynamicForward localhost:8080
 
-Host bastion-classchirp
-    HostName bastion.classchirp.com
-    ForwardAgent yes
-    User ubuntu
+Host dev-hq1-sv001
+  User gmitchell
+
+Host gerrit.corp.maystreet.com
+  User gmitchell
+  KexAlgorithms=+diffie-hellman-group1-sha1
+
+Host sftp05.maystreet.com
+  User gmitchell

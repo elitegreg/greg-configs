@@ -9,6 +9,7 @@
 #umask 022
 
 export GREG_CFG_DIR="${HOME}/.greg-configs"
+mkdir -p ~/.ssh/controlsessions
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -28,4 +29,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-eval `keychain --eval id_rsa `
+if [ -e "/usr/bin/keychain" ]; then
+    eval `keychain --eval id_rsa `
+fi
