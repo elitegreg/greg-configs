@@ -1,0 +1,33 @@
+Host *
+  Cipher aes128-ctr
+  ServerAliveInterval 30
+  ControlMaster auto
+  ControlPersist 1m
+  ControlPath ~/.ssh/controlsessions/%r@%h:%p
+
+Host vmserver 
+  HostName vmserver.tuxsoft.net
+  Port 2222
+  ForwardAgent yes
+
+Host ham
+  ForwardX11 yes
+
+Host gateway
+  User root
+
+Host vmserver-ipmi
+  HostName vmserver.tuxsoft.net
+  Port 2224
+  User ADMIN
+  KexAlgorithms=+diffie-hellman-group1-sha1
+
+Host bastion
+    HostName bastion.remind.com
+    ForwardAgent yes
+    User ubuntu
+
+Host bastion-classchirp
+    HostName bastion.classchirp.com
+    ForwardAgent yes
+    User ubuntu

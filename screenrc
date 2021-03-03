@@ -1,0 +1,8 @@
+# based on http://lists.gnu.org/archive/html/screen-users/2004-06/msg00009.html
+caption always "%{+r bc}%C|%H %{-} %L=%-Lw%45>%{kY}%n*%f%t%{-}%+Lw%-0<"
+
+bind j focus down
+bind k focus up
+
+startup_message off
+shell /bin/bash
