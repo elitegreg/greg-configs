@@ -4,7 +4,7 @@ elif [ -e /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
     GIT_PROMPT_SCRIPT=/usr/share/git-core/contrib/completion/git-prompt.sh
 fi
 
-if [ $GIT_PROMPT_SCRIPT != '' ]; then
+if [ "$GIT_PROMPT_SCRIPT" != '' ]; then
     source $GIT_PROMPT_SCRIPT
     git='$(__git_ps1 " [git:%s]")'
 else
