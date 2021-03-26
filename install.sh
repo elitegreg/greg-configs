@@ -50,3 +50,9 @@ install_file profile ~/.profile
 install_file screenrc ~/.screenrc
 install_file ssh/config ~/.ssh/config
 install_file tmux.conf ~/.tmux.conf
+
+if [ -e ~/.work ]; then
+    install_file gitconfig.work ~/.gitconfig
+else
+    install_file gitconfig.home ~/.gitconfig
+fi

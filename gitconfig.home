@@ -1,0 +1,17 @@
+[user]
+	name = Greg Mitchell
+	email = greg.mitchell@tuxsoft.net
+
+[push]
+    default = simple
+[rebase]
+    autosquash = true
+[alias]
+    co = checkout
+    ci = commit
+    stat = status
+    up = pull --rebase
+    sup = !sh -c 'git stash && git up && git stash apply'
+    restore = "!f(){ git checkout $(git rev-list -n 1 HEAD -- ${1})~1 -- ${1}; };f"
+[core]
+	excludesfile = /home/greg/.gitignore
