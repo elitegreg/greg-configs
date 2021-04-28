@@ -17,8 +17,8 @@ Host gateway
   User root
 
 Host vmserver-ipmi
-  HostName vmserver.tuxsoft.net
-  Port 2224
+  #HostName vmserver.tuxsoft.net
+  #Port 2224
   User ADMIN
   KexAlgorithms=+diffie-hellman-group1-sha1
 
