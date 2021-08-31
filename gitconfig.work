@@ -1,6 +1,6 @@
 [user]
 	name = Greg Mitchell
-	email = gmitchell@maystreet.com
+	email = gregory.mitchell@chicagotrading.com
 
 [push]
     default = simple
@@ -13,5 +13,3 @@
     up = pull --rebase
     sup = !sh -c 'git stash && git up && git stash apply'
     restore = "!f(){ git checkout $(git rev-list -n 1 HEAD -- ${1})~1 -- ${1}; };f"
-[core]
-	excludesfile = /home/greg/.gitignore
