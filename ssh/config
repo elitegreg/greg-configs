@@ -9,9 +9,11 @@ Host vmserver
   HostName vmserver.tuxsoft.net
   Port 2222
   ForwardAgent yes
+  AddressFamily inet
 
 Host ham
   ForwardX11 yes
+  AddressFamily inet
 
 Host gateway
   User root
@@ -21,11 +23,13 @@ Host vmserver-ipmi
   #Port 2224
   User ADMIN
   KexAlgorithms=+diffie-hellman-group1-sha1
+  AddressFamily inet
 
 Host bwing
   HostName bwing.tuxsoft.net
   Port 2225
   DynamicForward localhost:8080
+  AddressFamily inet
 
 Host dev-hq1-sv001
   User gmitchell
