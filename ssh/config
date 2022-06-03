@@ -22,21 +22,7 @@ Host vmserver-ipmi
   #HostName vmserver.tuxsoft.net
   #Port 2224
   User ADMIN
-  KexAlgorithms=+diffie-hellman-group1-sha1
   AddressFamily inet
+  #KexAlgorithms=+diffie-hellman-group1-sha1
+  HostKeyAlgorithms=+ssh-dss
 
-Host bwing
-  HostName bwing.tuxsoft.net
-  Port 2225
-  DynamicForward localhost:8080
-  AddressFamily inet
-
-Host dev-hq1-sv001
-  User gmitchell
-
-Host gerrit.corp.maystreet.com
-  User gmitchell
-  KexAlgorithms=+diffie-hellman-group1-sha1
-
-Host sftp05.maystreet.com
-  User gmitchell

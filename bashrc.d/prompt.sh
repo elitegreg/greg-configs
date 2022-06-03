@@ -37,7 +37,7 @@ grey='\[\033[1;37m\]'
 darkgrey='\[\033[1;30m\]'
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${green}\u@\h${reset}:${blue}\w${red}${git}${hg}${bzr}${reset}\$ "
+    PS1="\[\e]0;\u@\h: \w\a\]${green}\u@\h${reset}:${blue}\w${red}${git}${hg}${bzr}${reset}\$ "
 else
-    PS1="\u@\h:\w${git}${hg}${bzr}\$ "
+    PS1="\[\e]0;\u@\h: \w\a\]\u@\h:\w${git}${hg}${bzr}\$ "
 fi
