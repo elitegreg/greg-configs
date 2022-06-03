@@ -1,5 +1,5 @@
 if [ ! -e ${HOME}/.work ]; then
-    exit 0
+    return
 fi
 
 # User specific aliases and functions
