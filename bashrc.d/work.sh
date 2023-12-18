@@ -2,23 +2,22 @@ if [ ! -e ${HOME}/.work ]; then
     return
 fi
 
-# User specific aliases and functions
-export DEVKIT_XFCE_VERSION=STABLE
-if [ -f /ctc/devkit/v1/${DEVKIT_XFCE_VERSION}/wrappers/setup_devkit_env ]; then
-        source /ctc/devkit/v1/${DEVKIT_XFCE_VERSION}/wrappers/setup_devkit_env
-fi
-if [ -f /ctc/devkit/v1/${DEVKIT_XFCE_VERSION}/pkgsrc/etc/profile.d/vte.sh ]; then
-        source /ctc/devkit/v1/${DEVKIT_XFCE_VERSION}/pkgsrc/etc/profile.d/vte.sh
-fi
-export PATH=~/.local/bin:$PATH
-
-function volov {
-    if [ $# -eq 0 ]; then
-        env=1.9.1
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/greg/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/greg/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/greg/anaconda3/etc/profile.d/conda.sh"
     else
-        env=$1
+        export PATH="/home/greg/anaconda3/bin:$PATH"
     fi
-    source /sw/gsd/volov_venv/linux64/${env}/py_envs/main/bin/activate
-}
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
-eval `keychain --eval id_rsa id_dsa 0123ABCD`
+conda deactivate
+
+alias seven-env="conda activate py3.10 && cd ~/src/seven/ && poetry shell"
+alias seven="cd ~/src/seven"
