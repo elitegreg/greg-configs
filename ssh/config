@@ -26,3 +26,7 @@ Host vmserver-ipmi
   #KexAlgorithms=+diffie-hellman-group1-sha1
   HostKeyAlgorithms=+ssh-dss
 
+Host work
+  HostName vmserver.tuxsoft.net
+  Port 2225
+  ForwardX11 yes
