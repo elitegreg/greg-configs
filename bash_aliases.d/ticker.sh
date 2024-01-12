@@ -1,1 +1,1 @@
-alias runticker='sudo -u nobody ticker --config ~greg/.ticker.yaml'
+alias runticker='ticker --config ~/.ticker.yaml'

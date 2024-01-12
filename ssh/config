@@ -11,6 +11,12 @@ Host vmserver
   ForwardAgent yes
   AddressFamily inet
 
+Host work
+  HostName work.tuxsoft.net
+  Port 2225
+  AddressFamily inet
+  ForwardX11 yes
+
 Host ham
   ForwardX11 yes
   AddressFamily inet
